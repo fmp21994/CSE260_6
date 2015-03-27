@@ -128,9 +128,8 @@ void sort(struct person* person)
 }
 struct person *search(char *sname)
 {
-    struct person *p = top, *b = 0;
+    struct person *p = top, *b = 0, *r;
     while (p != 0)
-    {
         if (strcmp(sname, p->name) == 0) {
             printf("%s\n", p->name);
             printf("%d\n", p->phone);
@@ -143,7 +142,6 @@ struct person *search(char *sname)
             b = p;
             p = p->next;
         }
-    }
     return 0;
 }
 
